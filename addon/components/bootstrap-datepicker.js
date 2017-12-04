@@ -43,15 +43,19 @@ export default Ember.Component.extend(DatepickerSupport, {
 
   focusOut() {
     if (this.get('forceParse')) {
-      this._forceParse();
+      this._forceParse($('.day:hover').data('date'));
+    }
+
+    if(this.get('autoclose')) {
+      $('.datepicker').hide();
     }
   },
 
-  _forceParse() {
-    let date = Date.parse(this.element.value);
+  _forceParse(data) {
+    let date = new Date(data);
 
     if (!isNaN(date)) {
-      this.set('value', new Date(date));
+      this.set('value', date);
     }
   }
 });

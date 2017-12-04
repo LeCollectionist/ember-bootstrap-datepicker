@@ -3,6 +3,7 @@ import Ember from 'ember';
 const { on, run } = Ember;
 
 export default Ember.Mixin.create({
+  autofocus: false,
   mustUpdateInput: true,
   value: null,
   // add the observed properties
@@ -18,6 +19,7 @@ export default Ember.Mixin.create({
   setupBootstrapDatepicker: on('didInsertElement', function() {
     this.$().
       datepicker({
+        autofocus: this.get('autofocus'),
         autoclose: this.get('autoclose'),
         calendarWeeks: this.get('calendarWeeks'),
         clearBtn: this.get('clearBtn'),
