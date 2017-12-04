@@ -56,6 +56,7 @@ export default Ember.Component.extend(DatepickerSupport, {
 
     if (!isNaN(date)) {
       this.set('value', date);
+      this.sendAction('changeDate', date);
     }
   }
 });
