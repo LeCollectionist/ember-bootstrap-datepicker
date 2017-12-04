@@ -9,7 +9,7 @@ var mergeTrees = require('broccoli-merge-trees');
 var map = require('broccoli-stew').map;
 
 module.exports = {
-  name: 'ember-bootstrap-datepicker',
+  name: 'lecollectionist-ember-bootstrap-datepicker',
 
   included: function(app) {
     this._super.included.apply(this, arguments);
