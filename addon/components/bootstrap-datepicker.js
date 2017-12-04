@@ -42,11 +42,12 @@ export default Ember.Component.extend(DatepickerSupport, {
   forceParse: true,
 
   focusOut() {
+    let day = $('.day:hover').data('date');
     if (this.get('forceParse')) {
-      this._forceParse($('.day:hover').data('date'));
+      this._forceParse(day);
     }
 
-    if(this.get('autoclose')) {
+    if(this.get('autoclose') && day) {
       $('.datepicker').hide();
     }
   },

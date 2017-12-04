@@ -1,6 +1,6 @@
 {
   "name": "lecollectionist-ember-bootstrap-datepicker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Datepicker component for Ember CLI based on bootstrap-datepicker. It doesn't have any external dependency except bootstrap-datepicker, supports popup and inline modes.",
   "keywords": [
     "ember-addon",
