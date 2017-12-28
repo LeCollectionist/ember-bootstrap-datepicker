@@ -146,6 +146,10 @@ export default Ember.Mixin.create({
     let customParser = this.get('customParser');
     let dates = [];
 
+    if (this.get('startDate') && value == null) {
+      value = this.get('startDate');
+    }
+
     if (!this.get('mustUpdateInput')) {
       this.set('mustUpdateInput', true);
       return;
